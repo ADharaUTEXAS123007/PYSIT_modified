@@ -157,6 +157,7 @@ class TemporalLeastSquares(ObjectiveFunctionBase):
         grad = m0.perturbation()
         r_norm2 = 0.0
         pseudo_h_diag = np.zeros(m0.asarray().shape)
+        print("compute gradient")
         for shot in shots:
             if ('pseudo_hess_diag' in aux_info) and aux_info['pseudo_hess_diag'][0]:
                 g, r, h = self._gradient_helper(shot, m0, ignore_minus=True, ret_pseudo_hess_diag_comp = True, **kwargs)
