@@ -30,16 +30,16 @@ if __name__ == '__main__':
     # We "split up" the two reflectors contained in dC so each can be manipulated seperatly. 
     C0 = np.ones((nx,nz))
     dC = C.reshape(nx,nz) - C0
-    dC1 = dC[:,:np.ceil(nz/2)]
-    dC2 = dC[:,np.ceil(nz/2):]
+    dC1 = dC[:,:int(np.ceil(nz/2))]
+    dC2 = dC[:,int(np.ceil(nz/2)):]
     dK = np.zeros((nx,nz))
     dR = np.zeros((nx,nz))
     
     # These next 4 lines allow us to modify the sign and magntiude of each of the bumps for kappa and rho.
-    dK[:,:np.ceil(nz/2)] += dC1   
-    dR[:,:np.ceil(nz/2)] += dC1   
-    dK[:,np.ceil(nz/2):] += dC2
-    dR[:,np.ceil(nz/2):] += dC2
+    dK[:,:int(np.ceil(nz/2))] += dC1   
+    dR[:,:int(np.ceil(nz/2))] += dC1   
+    dK[:,int(np.ceil(nz/2)):] += dC2
+    dR[:,int(np.ceil(nz/2)):] += dC2
 
     # Model parameters have to be column vectors. We adjusted their shape above simply for easier manipulation.
     kappa = (C0 + dK).reshape((nx*nz,1))
