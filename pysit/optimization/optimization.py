@@ -343,6 +343,8 @@ class OptimizationBase(object):
             # pass information for the solver type
             objective_arguments.update(kwargs)
 
+            print("step gradient")
+
             # Compute the gradient    
             gradient = self.objective_function.compute_gradient(shots, self.base_model, aux_info=aux_info, **objective_arguments)
             objective_value = aux_info['objective_value'][1]
