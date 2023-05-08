@@ -94,6 +94,7 @@ class TemporalLeastSquares(ObjectiveFunctionBase):
 
         """
 
+        print("gradient helper :")
         # Compute the residual vector and its norm
         dWaveOp=[]
 
