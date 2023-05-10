@@ -18,6 +18,9 @@ if __name__ == '__main__':
     x_config = (0.1, 1.0, pmlx, pmlx)
     z_config = (0.1, 0.8, pmlz, pmlz)
 
+    print("x_config :", x_config)
+    print("z_config :", z_config)
+
     d = RectangularDomain(x_config, z_config)
     
     # nx and nz specify the number of nodes used in the computational mesh.
