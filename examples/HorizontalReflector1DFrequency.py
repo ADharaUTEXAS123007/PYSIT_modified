@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from pysit import *
 from pysit.gallery import horizontal_reflector
 
+
 if __name__ == '__main__':
     # Setup
     hybrid=False
