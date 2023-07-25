@@ -3,7 +3,7 @@ import time
 
 import numpy as np
 import matplotlib
-matplotlib.use('TKAgg',warn=False, force=True)
+matplotlib.use('TKAgg')
 
 import matplotlib.pyplot as plt
 
