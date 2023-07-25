@@ -2,6 +2,9 @@
 import time
 
 import numpy as np
+import matplotlib
+matplotlib.use('TKAgg',warn=False, force=True)
+
 import matplotlib.pyplot as plt
 
 from pysit import *
